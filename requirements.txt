@@ -1,0 +1,50 @@
+# RAG-Anything + Gemini — Python Dependencies
+# ─────────────────────────────────────────────
+# Core
+raganything          # pip install raganything
+lightrag-hku         # automatically installed by raganything
+
+# Gemini
+google-generativeai>=0.8.0
+
+# Utilities
+python-dotenv        # for loading .env file
+networkx             # knowledge graph export (GraphML)
+numpy
+
+# ── Optional parsers ──────────────────────────────────────────────────────
+# MinerU (best quality, recommended):
+#   pip install mineru
+#   Notes: requires Python 3.10+; GPU optional but recommended
+#
+# Docling (alternative):
+#   pip install docling
+#
+# PaddleOCR (OCR-heavy docs):
+#   pip install paddleocr paddlepaddle
+#
+# LibreOffice (Office docs: .docx, .pptx, .xlsx):
+#   macOS:  brew install libreoffice
+#   Ubuntu: sudo apt install libreoffice
+#   Win:    https://www.libreoffice.org/download/download-libreoffice/
+
+# ── Install command ───────────────────────────────────────────────────────
+# pip install raganything google-generativeai python-dotenv networkx numpy
+
+
+# # # 1. Install
+# pip install raganything google-generativeai networkx
+
+# # 2. Set key
+# export GEMINI_API_KEY="your-key"
+
+# # 3. Run demo (no documents needed)
+# python rag_gemini_main.py --mode demo
+
+# # 4. Process your own PDF
+# python rag_gemini_main.py --mode process --file my_report.pdf
+
+# # 5. Query
+# python rag_gemini_main.py --mode query --question "What does the table show?"
+
+# pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
